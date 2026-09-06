@@ -1,7 +1,5 @@
 # Caddy with LuaDNS & Layer 4 (L4)
 
-[![Containers CI](https://github.com/kushwanth/containers/actions/workflows/containers.yml/badge.svg)](https://github.com/kushwanth/containers/actions/workflows/containers.yml)
-[![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://github.com/renovatebot/renovate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platforms](https://img.shields.io/badge/platforms-linux%2Famd64%20%7C%20linux%2Farm64-blue.svg)](#platform-support)
 
