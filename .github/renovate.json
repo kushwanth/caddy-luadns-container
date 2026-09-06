@@ -3,10 +3,21 @@
   "extends": [
     "config:recommended"
   ],
-  "enabledManagers": [
-    "custom.regex"
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Dependency Dashboard: Upstream Updates",
+  "dependencyDashboardApproval": true,
+  "prCreation": "not-pending",
+  "schedule": [
+    "before 6am on Monday"
   ],
-  "automerge": false,
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "dependencyDashboardApproval": true
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",

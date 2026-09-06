@@ -31,7 +31,7 @@ A production-ready, multi-architecture [Caddy](https://caddyserver.com/) contain
   - [Troubleshooting DNS Propagation](#troubleshooting-dns-propagation)
 - [Platform Support](#platform-support)
 - [Published Tags](#published-tags)
-- [Automated Maintenance (Renovate)](#automated-maintenance-renovate)
+- [Automated Maintenance (Renovate Dashboard)](#automated-maintenance)
 - [License](#license)
 
 ---
@@ -43,7 +43,7 @@ A production-ready, multi-architecture [Caddy](https://caddyserver.com/) contain
 - **Multi-Platform Native Performance**: Built with Docker Buildx for `linux/amd64` and `linux/arm64` (Apple Silicon, AWS Graviton, Raspberry Pi 4/5).
 - **Fast Cross-Compilation**: Utilizes Docker `--platform=$BUILDPLATFORM` for native Go compilation speed.
 - **Lightweight & Secure**: Based on minimal Alpine Linux with built-in healthchecks and build-time module verification.
-- **Automated Upstream Tracking**: Renovate continuously monitors upstream Caddy and LuaDNS releases and dispatches review notifications.
+- **Automated Upstream Tracking**: Monitored by Renovate's Dependency Dashboard. Tracks upstream Caddy releases with release notes and changelogs without generating unrequested Pull Requests.
 
 ---
 
@@ -292,6 +292,7 @@ docker pull ghcr.io/<owner>/caddy-luadns:latest
 - Built from official upstream `caddy:builder-alpine` and `caddy:alpine` base images.
 - Plugins (`github.com/caddy-dns/luadns` and `github.com/mholt/caddy-l4`) are compiled from their latest releases on build.
 - Multi-platform images compile and publish to GHCR whenever a commit is pushed to `main`.
+- **Renovate Dependency Dashboard**: Configured with `dependencyDashboardApproval: true` and `prCreation: "not-pending"`. Rather than creating automated PRs, Renovate maintains a dedicated **Dependency Dashboard** issue in the repository containing upstream release notes, SemVer diffs, and changelogs for human review.
 
 ---
 
