@@ -1,0 +1,3 @@
+:80 {
+	respond "Caddy with LuaDNS & L4 is running!" 200
+}
