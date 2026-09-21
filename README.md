@@ -209,7 +209,7 @@ example.com {
 
 ### Obtaining LuaDNS Credentials
 
-1. Log in to your account at [LuaDNS Dashboard](https://api.luadns.net/).
+1. Log in to your account at [LuaDNS Dashboard](https://app.luadns.net/).
 2. Navigate to **Account Settings** / **API Credentials**.
 3. Locate your **Email Address** and generate an **API Key**.
 4. Store these securely in your deployment environment (e.g., a `.env` file).
