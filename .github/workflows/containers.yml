@@ -20,13 +20,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
+      - name: Read Caddy version
+        id: caddy
+        run: |
+          version="$(sed -n 's/^ARG CADDY_VERSION=//p' Dockerfile)"
+          test -n "$version"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
       - name: Docker metadata
         id: meta
         uses: docker/metadata-action@v6
         with:
           images: ghcr.io/${{ github.repository_owner }}/caddy-luadns
           tags: |
-            type=raw,value=latest
+            type=raw,value=${{ steps.caddy.outputs.version }},priority=900
+            type=raw,value=latest,priority=200
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
