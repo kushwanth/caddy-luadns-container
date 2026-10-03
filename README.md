@@ -50,7 +50,7 @@ A production-ready, multi-architecture [Caddy](https://caddyserver.com/) contain
 | Detail | Value |
 | :--- | :--- |
 | **Image Registry** | `ghcr.io/<owner>/caddy-luadns` |
-| **Base Image** | `caddy:alpine` |
+| **Runtime Base Image** | `alpine:3.23` |
 | **Supported Architectures** | `linux/amd64`, `linux/arm64` |
 | **Published Tags** | `:latest` |
 
